@@ -205,6 +205,41 @@ a:focus {
 }
 
 /*
+    Components: Author
+*/
+
+.c-author {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+    .c-author__image {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        margin-right: 16px;
+    }
+
+    .c-author__caption {
+        padding-top: 0;
+    }
+
+    .c-author__name,
+    .c-author__meta {
+        margin-bottom: 0;
+    }
+
+    .c-author__meta {
+        font-size: 14px;
+        font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+        line-height: 16px;
+    }
+
+/*
     Utilities: Spacing
     ---
     Utility classes to put specific spacing values onto elements.

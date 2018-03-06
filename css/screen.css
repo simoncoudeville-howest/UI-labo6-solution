@@ -232,6 +232,10 @@ a:focus {
         margin-bottom: 0;
     }
 
+    .c-author__name {
+        font-size: 16px;
+    }
+
     .c-author__meta {
         font-size: 14px;
         font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;

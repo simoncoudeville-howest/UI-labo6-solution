@@ -63,14 +63,6 @@ body {
     margin: 0 auto;
 }
 
-/* html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-} */
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301

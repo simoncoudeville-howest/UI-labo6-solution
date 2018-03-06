@@ -204,6 +204,38 @@ a:focus {
     font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
     line-height: 16px;
 }
+
+/*
+    Utilities: Spacing
+    ---
+    Utility classes to put specific spacing values onto elements.
+*/
+
+.u-margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.u-margin-bottom-xs {
+    margin-bottom: 8px;
+}
+
+.u-margin-bottom-sm {
+    margin-bottom: 16px;
+}
+
+.u-margin-bottom-md {
+    margin-bottom: 24px;
+}
+
+.u-margin-bottom-lg {
+    margin-bottom: 32px;
+}
+
+.u-margin-bottom-xl {
+    margin-bottom: 48px;
+}
+
+
 /*
     Objects: Container
     ---

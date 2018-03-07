@@ -248,6 +248,23 @@ a:focus {
     }
 
 /*
+    Components: Article
+*/
+
+.c-article {
+    max-width: 996px;
+    margin: 0 auto;
+}
+
+    .c-article__body {
+        max-width: 576px;
+    }
+
+    .c-article__author {
+        margin-right: 24px;
+    }
+
+/*
     Utilities: Spacing
     ---
     Utility classes to put specific spacing values onto elements.

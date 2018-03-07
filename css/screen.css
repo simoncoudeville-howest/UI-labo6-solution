@@ -223,6 +223,23 @@ a:focus {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     h1 {
+        font-size: 46px;
+        line-height: 56px;
+    }
+}
+
+/* Large devices (landscape tablets, desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 52px;
+        line-height: 64px;
+        margin-bottom: 48px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    h1 {
         font-size: 58px;
         line-height: 64px;
     }
@@ -244,10 +261,7 @@ a:focus {
 */
 
 .c-author {
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
-    -ms-align-items: center;
     align-items: center;
     margin-bottom: 48px;
 }
@@ -278,6 +292,17 @@ a:focus {
         line-height: 16px;
     }
 
+/* Large devices (landscape tablets, desktops, 992px and up) */
+@media (min-width: 992px) {
+    .c-author {
+        display: block;
+    }
+
+    .c-author__image {
+        margin-bottom: 16px;
+    }
+}
+
 /*
     Components: Article
 */
@@ -291,9 +316,18 @@ a:focus {
         max-width: 576px;
     }
 
-    .c-article__author {
-        margin-right: 24px;
+/* Large devices (landscape tablets, desktops, 992px and up) */
+@media (min-width: 992px) {
+    .c-article {
+        display: flex;
+        flex-wrap: wrap;
     }
+
+    .c-article__author {
+        width: 20%;
+        margin-right: 48px;
+    }
+}
 
 /*
     Utilities: Spacing

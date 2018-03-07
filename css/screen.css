@@ -49,6 +49,7 @@
 */
 
 html {
+    /* position: relative; */
     font-size: 16px;
     line-height: 1.5;
     font-family: "Droid Serif", Georgia, serif;
@@ -58,9 +59,31 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+/* html::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(#ccc 0, transparent 1px), linear-gradient(#ccc 0, transparent 1px), linear-gradient(#ccc 0, transparent 1px);
+    background-size: 100% 24px, 100% 24px, 100% 24px;
+    background-position: 0 8px, 0 16px, 0 24px;
+} */
+
+/* body {
     max-width: 42em;
     margin: 0 auto;
+} */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html {
+        padding: 48px 48px 24px;
+    }
 }
 
 /*
@@ -197,6 +220,14 @@ a:focus {
     color: #1ABAFF;
 }
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 58px;
+        line-height: 64px;
+    }
+}
+
 /*
     Components: Type
     ---
@@ -294,7 +325,6 @@ a:focus {
     margin-bottom: 48px;
 }
 
-
 /*
     Objects: Container
     ---
@@ -353,10 +383,7 @@ a:focus {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    h1 {
-        font-size: 58px;
-        line-height: 64px;
-    }
+
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */

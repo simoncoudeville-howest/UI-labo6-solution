@@ -26,7 +26,13 @@
                 <h1>Balancing Line Length And Font Size In Responsive Web Design</h1>
             </header>
             <figure class="c-article__image">
-                <img src="img/picture@2x.jpg" alt="Picture of a yawning cat">
+                <picture>
+                    <source srcset="img/picture@2x.jpg" media="(min-width: 1200px)">
+                    <source srcset="img/picture.jpg" media="(min-width: 992px)">
+                    <source srcset="img/picture-medium@2x.jpg" media="(min-width: 768px)">
+                    <source srcset="img/picture-medium.jpg" media="(min-width: 576px)">
+                    <img srcset="img/picture-square@2x.jpg" alt="Picture of girl reading on a tablet">
+                </picture>
             </figure>
             <div class="c-article__body">
                 <div class="c-article__author">

@@ -338,40 +338,9 @@ a:focus {
 }
 
 /*
-    Objects: Container
     ---
-    Creates a horizontal container that sets de global max-width
-*/
-/*
-.o-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1440px;
-}
-*/
-/*
-    Objects: Grid
-    ---
-    Creates a horizontal row with padding
 */
 
-/*
-    Components: Row
-    ---
-    Creates a horizontal row with padding
-*/
-/*
-.c-row {
-    position: relative;
-    padding: 24px 24px 0;
-}
-*/
-/*
-    Utility classes
-    ---
-    Several helper classes
-*/
-/*
 .u-max-width-sm {
     max-width: 36em
 }

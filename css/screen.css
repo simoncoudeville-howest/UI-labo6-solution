@@ -120,7 +120,7 @@ h2 {
     margin: 0 0 24px;
 }
 
-* + h2 {
+*+h2 {
     padding-top: 24px;
 }
 
@@ -154,7 +154,7 @@ ol {
 }
 
 li ul,
-li ol{
+li ol {
     margin-bottom: 0;
 }
 

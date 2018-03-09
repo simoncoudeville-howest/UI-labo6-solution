@@ -295,6 +295,12 @@ a:focus {
     padding: 0 24px;
 }
 
+.c-article__date {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
 @media (min-width: 768px) {
     .c-article__header {
         padding: 48px 48px 24px;
@@ -319,36 +325,6 @@ a:focus {
     .c-article__content {
         width: 75%;
     }
-}
-
-/*
-    Utilities: Spacing
-    ---
-    Utility classes to put specific spacing values onto elements.
-*/
-
-.u-margin-bottom-none {
-    margin-bottom: 0;
-}
-
-.u-margin-bottom-xs {
-    margin-bottom: 8px;
-}
-
-.u-margin-bottom-sm {
-    margin-bottom: 16px;
-}
-
-.u-margin-bottom-md {
-    margin-bottom: 24px;
-}
-
-.u-margin-bottom-lg {
-    margin-bottom: 32px;
-}
-
-.u-margin-bottom-xl {
-    margin-bottom: 48px;
 }
 
 /*

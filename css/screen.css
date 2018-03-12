@@ -315,6 +315,8 @@ a:focus {
 
 @media (min-width: 992px) {
     .c-article__body {
+        display: -webkit-flex;
+        display: -ms-flex;
         display: flex;
         flex-wrap: wrap;
     }

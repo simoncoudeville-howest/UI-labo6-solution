@@ -80,7 +80,7 @@ h1,
 h2,
 h3 {
     color: #17181A;
-    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
 h1 {
@@ -219,14 +219,13 @@ a:focus {
 
 .c-author__name {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 24px;
 }
 
 .c-author__meta {
     font-size: 14px;
-    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
-    line-height: 16px;
-    margin-top: 4px;
+    font-family: "Inter", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 24px;
 }
 
 @media (min-width: 992px) {
@@ -234,7 +233,7 @@ a:focus {
         display: block;
     }
     .c-author__image {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 }
 

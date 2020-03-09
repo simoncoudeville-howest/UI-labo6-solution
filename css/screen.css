@@ -5,41 +5,15 @@
 */
 
 @font-face {
-    font-family: "Inter UI";
+    font-family: "Inter Web";
     font-weight: 400;
-    src: url("../fonts/Inter-UI-Regular.woff2") format("woff2")
+    src: url("../fonts/Inter-Regular.woff2") format("woff2")
 }
 
 @font-face {
-    font-family: "Inter UI";
+    font-family: "Inter Web";
     font-weight: 700;
-    src: url("../fonts/Inter-UI-Bold.woff2") format("woff2")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 400;
-    src: url("../fonts/DroidSerif-Regular-webfont.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 400;
-    font-style: italic;
-    src: url("../fonts/DroidSerif-Italic-webfont.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 700;
-    src: url("../fonts/DroidSerif-Bold-webfont.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Droid Serif";
-    font-weight: 700;
-    font-style: italic;
-    src: url("../fonts/DroidSerif-BoldItalic-webfont.woff") format("woff")
+    src: url("../fonts/Inter-Bold.woff2") format("woff2")
 }
 
 /*
@@ -51,7 +25,9 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: "Droid Serif", Georgia, serif;
+    /* font-family: "Inter Web", "Helvetica Neue", Helvetica, arial, sans-serif; */
+    font-family: "droid-serif", Georgia, serif;
+    font-feature-settings: "zero", "liga";
     color: #5C6366;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -118,10 +94,6 @@ h2 {
     font-size: 23px;
     line-height: 32px;
     margin: 0 0 24px;
-}
-
-*+h2 {
-    margin-top: 48px;
 }
 
 h3 {
@@ -220,17 +192,6 @@ a:focus {
 }
 
 /*
-    Components: Type
-    ---
-    Special typography classes
-*/
-
-.c-type-meta {
-    font-size: 14px;
-    line-height: 16px;
-}
-
-/*
     Components: Author
 */
 
@@ -281,9 +242,17 @@ a:focus {
     Components: Article
 */
 
-.c-article__header,
-.c-article__body {
+.c-article__header {
     max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+    /* display: flex;
+    flex-direction: column; */
+    display: flow-root;
+}
+
+.c-article__body {
+    max-width: calc(36em + 96px);
     margin: 0 auto;
 }
 
@@ -315,6 +284,7 @@ a:focus {
 
 @media (min-width: 992px) {
     .c-article__body {
+        max-width: 1200px;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
@@ -327,6 +297,27 @@ a:focus {
     .c-article__content {
         width: 75%;
     }
+}
+
+/*
+    Components: Quote
+*/
+
+.c-quote {
+    margin: 48px -24px;
+    padding: 24px;
+    color: #00B37D;
+    background-color: #F2FAF8;
+    /* border: 1px solid #B3FFE8; */
+}
+
+/*
+    Scope: Content
+    Specific behaviour inside s-content class
+*/
+
+.s-content * + h2 {
+    margin-top: 48px;
 }
 
 /*

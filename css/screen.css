@@ -25,9 +25,7 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    /* font-family: "Inter Web", "Helvetica Neue", Helvetica, arial, sans-serif; */
     font-family: "droid-serif", Georgia, serif;
-    font-feature-settings: "zero", "liga";
     color: #5C6366;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

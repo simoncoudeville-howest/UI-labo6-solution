@@ -31,13 +31,6 @@ html {
     color: #5C6366;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
 }
 
 /*
@@ -46,12 +39,6 @@ html {
  *
  * Customize the background color to match your design.
  */
-
-::-moz-selection {
-    background: #00E6A1;
-    color: white;
-    text-shadow: none;
-}
 
 ::selection {
     background: #00E6A1;
@@ -80,7 +67,7 @@ h1,
 h2,
 h3 {
     color: #17181A;
-    font-family: "Inter", "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -199,13 +186,13 @@ a:focus {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+    gap: 16px;
 }
 
 .c-author__image {
     width: 56px;
     height: 56px;
     border-radius: 100%;
-    margin-right: 16px;
 }
 
 .c-author__caption {
@@ -224,16 +211,14 @@ a:focus {
 
 .c-author__meta {
     font-size: 14px;
-    font-family: "Inter", "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 24px;
 }
 
 @media (min-width: 992px) {
     .c-author {
-        display: block;
-    }
-    .c-author__image {
-        margin-bottom: 16px;
+        flex-direction: column;
+        align-items: unset;
     }
 }
 
@@ -241,17 +226,9 @@ a:focus {
     Components: Article
 */
 
-.c-article__header {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 16px;
-    /* display: flex;
-    flex-direction: column; */
-    display: flow-root;
-}
-
+.c-article__header,
 .c-article__body {
-    max-width: calc(36em + 96px);
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -266,7 +243,6 @@ a:focus {
 .c-article__date {
     font-size: 14px;
     line-height: 16px;
-    margin-bottom: 8px;
 }
 
 @media (min-width: 768px) {
@@ -274,7 +250,7 @@ a:focus {
         padding: 48px 48px 24px;
     }
     .c-article__author {
-        padding-bottom: 24px;
+        margin-bottom: 48px;
     }
     .c-article__body {
         padding: 24px 48px;
@@ -283,15 +259,12 @@ a:focus {
 
 @media (min-width: 992px) {
     .c-article__body {
-        max-width: 1200px;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        gap: 24px;
     }
+
     .c-article__author {
         width: 25%;
-        padding-right: 24px;
     }
     .c-article__content {
         width: 75%;
@@ -327,6 +300,20 @@ a:focus {
 
 .u-max-width-sm {
     max-width: 36em;
+}
+
+/*
+    Utitlities: whitespace
+    ---
+    Utility classes to put specific margins and padding onto elements
+*/
+
+.u-mb-clear {
+    margin-bottom: 0;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px;
 }
 
 /*

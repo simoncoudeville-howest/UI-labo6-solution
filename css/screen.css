@@ -1,58 +1,70 @@
-/*
-    Fonts
-    ---
-    @font-face declarations
-*/
-
+/*---------------------------------------/*
+ # TOOLS
+/*---------------------------------------*/
+/*---------------------------------------/*
+ # SETTINGS
+/*---------------------------------------*/
+/*---------------------------------------/*
+ # GENERIC
+/*---------------------------------------*/
 @font-face {
-    font-family: "Inter Web";
-    font-weight: 400;
-    src: url("../fonts/Inter-Regular.woff2") format("woff2")
+  font-family: "Inter Web";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter Web";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Inter Web";
-    font-weight: 700;
-    src: url("../fonts/Inter-Bold.woff2") format("woff2")
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*---------------------------------------/*
+ # ELEMENTS
+/*---------------------------------------*/
 /*
     Elements: Page
     ---
     Default markup for page level elements
 */
-
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "droid-serif", Georgia, serif;
-    color: #5C6366;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "droid-serif", Helvetica, arial, sans-serif;
+  color: hsl(198.0786026201, 10%, 30%);
+  scroll-behavior: smooth;
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::selection {
-    background: #00E6A1;
-    color: white;
-    text-shadow: none;
-}
-
-/*
-    Elements: Images
-    ---
-    Default markup for images to make them responsive
+    Customize the background color and color to match your design.
 */
-
-img {
-    max-width: 100%;
-    vertical-align: top;
+::-moz-selection {
+  background: hsl(198.0786026201, 100%, 50%);
+  color: white;
+}
+::selection {
+  background: hsl(198.0786026201, 100%, 50%);
+  color: white;
 }
 
 /*
@@ -60,39 +72,56 @@ img {
     ---
     Default markup for typographic elements
 */
-
 h1,
 h2,
-h3 {
-    color: #17181A;
-    font-family: "Inter", sans-serif;
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter Web", Times, serif;
+  color: hsl(198.0786026201, 10%, 10%);
 }
 
 h1 {
-    font-size: 36px;
-    line-height: 40px;
-    margin: 0 0 24px;
-    font-family: "Playfair Display", serif;
+  font-size: 1.8020324707rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 36.0625em) {
+  h1 {
+    font-size: 2.8865075782rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 48.0625em) {
+  h1 {
+    font-size: 3.6532361537rem;
+    line-height: 4rem;
+  }
 }
 
 h2 {
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 1.423828125rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 p,
@@ -102,202 +131,316 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+  margin-bottom: 1.5rem;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+  margin-left: 1.5rem;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 blockquote {
-    font-style: italic;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
-}
-
-blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+  font-style: italic;
+  font-size: 1.423828125rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 figcaption {
-    font-size: 12px;
-    line-height: 16px;
-    padding-top: 8px;
+  font-size: 0.8888888889rem;
+  line-height: 1rem;
+  margin-top: 0.5rem;
+  color: hsl(198.0786026201, 10%, 50%);
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 24px;
+  border: 0;
+  height: 1px;
+  background: hsl(198.0786026201, 10%, 90%);
+  margin-bottom: 1.5rem;
 }
 
 a {
-    color: #00A1E6;
-    transition: all .1s ease-in-out;
+  color: hsl(198.0786026201, 100%, 40%);
+  transition: all 0.1s ease-in-out;
 }
 
-a:visited,
+a:visited {
+  color: hsl(198.0786026201, 100%, 40%);
+}
+
+a:hover {
+  color: hsl(198.0786026201, 100%, 50%);
+}
+
 a:active {
-    color: #00B37D;
+  color: hsl(198.0786026201, 100%, 30%);
 }
 
-a:hover,
-a:focus {
-    color: #1ABAFF;
+/*---------------------------------------/*
+ # OBJECTS
+/*---------------------------------------*/
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row with padding
+*/
+.o-row {
+  padding: 1.5rem 1.5rem 0;
+  display: flow-root;
+}
+@media (min-width: 48.0625em) {
+  .o-row {
+    padding: 1.5rem 3rem 0;
+  }
 }
 
-@media (min-width: 768px) {
-    h1 {
-        font-size: 46px;
-        line-height: 56px;
-    }
+.o-row--primary {
+  background: hsl(198.0786026201, 95%, 65%);
 }
 
-@media (min-width: 992px) {
-    h1 {
-        font-size: 52px;
-        line-height: 64px;
-    }
+.o-row--grey-dark {
+  background-color: hsl(198.0786026201, 10%, 20%);
+  color: white;
 }
 
-@media (min-width: 1200px) {
-    h1 {
-        font-size: 58px;
-        line-height: 72px;
-    }
+@media (min-width: 48.0625em) {
+  .o-row--l {
+    padding: 3rem 3rem 1.5rem;
+  }
 }
 
 /*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 75rem;
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+.o-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  flex-basis: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+.o-layout--gutter {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.o-layout--gutter > .o-layout__item {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.o-layout--gutter-s {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.o-layout--gutter-s > .o-layout__item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.o-layout--gutter-l {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.o-layout--gutter-l > .o-layout__item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* reverse horizontal row modifier */
+.o-layout--row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+.o-layout--justify-start {
+  justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+  justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+  justify-content: center;
+}
+
+.o-layout--justify-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+  justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+.o-layout--align-start {
+  align-items: flex-start;
+}
+
+.o-layout--align-end {
+  align-items: flex-end;
+}
+
+.o-layout--align-center {
+  align-items: center;
+}
+
+.o-layout--align-baseline {
+  align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+.o-layout--align-content-start {
+  align-content: start;
+}
+
+.o-layout--align-content-end {
+  align-content: end;
+}
+
+.o-layout--align-content-center {
+  align-content: center;
+}
+
+.o-layout--align-content-space-around {
+  align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+  align-content: space-between;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/*
     Components: Author
 */
-
 .c-author {
-    display: flex;
-    align-items: center;
-    margin-bottom: 24px;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+@media (min-width: 62.0625em) {
+  .c-author {
+    flex-direction: column;
+    align-items: unset;
+  }
 }
 
 .c-author__image {
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
 }
 
 .c-author__caption {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .c-author__name,
 .c-author__meta {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .c-author__name {
-    font-size: 16px;
-    line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .c-author__meta {
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-    line-height: 24px;
-}
-
-@media (min-width: 992px) {
-    .c-author {
-        flex-direction: column;
-        align-items: unset;
-    }
-}
-
-/*
-    Components: Article
-*/
-
-.c-article__header,
-.c-article__body {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.c-article__header {
-    padding: 24px 24px 0;
-}
-
-.c-article__body {
-    padding: 0 24px;
-}
-
-.c-article__date {
-    font-size: 14px;
-    line-height: 16px;
-}
-
-@media (min-width: 768px) {
-    .c-article__header {
-        padding: 48px 48px 24px;
-    }
-    .c-article__author {
-        margin-bottom: 48px;
-    }
-    .c-article__body {
-        padding: 24px 48px;
-    }
-}
-
-@media (min-width: 992px) {
-    .c-article__body {
-        display: flex;
-        gap: 24px;
-    }
-
-    .c-article__author {
-        width: 25%;
-    }
-    .c-article__content {
-        width: 75%;
-    }
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  line-height: 24px;
 }
 
 /*
     Components: Quote
 */
-
 .c-quote {
-    margin: 48px -24px;
-    padding: 24px;
-    color: #00B37D;
-    background-color: #F2FAF8;
-    /* border: 1px solid #B3FFE8; */
+  margin: 48px -24px;
+  padding: 24px;
+  color: hsl(161.9213973799, 100%, 35%);
+  background-color: hsl(161.9213973799, 90%, 95%);
+}
+
+/*
+    Component: layout block
+    ---
+    A small component to demonstrate the layout items
+*/
+.c-layout-block {
+  background-color: LightGrey;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.c-layout-block--ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /*
     Scope: Content
     Specific behaviour inside s-content class
 */
-
 .s-content * + h2 {
-    margin-top: 48px;
+  margin-top: 3rem;
 }
 
+/*---------------------------------------/*
+ # UTILITIES
+/*---------------------------------------*/
 /*
-    Utilities: max-width
+    Utilities: Max widths
     ---
-    Utility classes to put specific max widths onto elements.
+    max-width utility classes
 */
+.u-max-width-s {
+  max-width: 37.5rem;
+}
 
-.u-max-width-sm {
-    max-width: 36em;
+.u-max-width-m {
+  max-width: 60rem;
+}
+
+.u-max-width-l {
+  max-width: 87.5rem;
 }
 
 /*
@@ -305,101 +448,424 @@ a:focus {
     ---
     Utility classes to put specific margins and padding onto elements
 */
-
 .u-mb-clear {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.u-mb-sm {
-    margin-bottom: 8px;
+.u-mb-s {
+  margin-bottom: 1rem;
+}
+
+.u-mb-xs {
+  margin-bottom: 0.5rem;
 }
 
 /*
-    Media Queries
-    ---
-    EXAMPLE Media Queries for Responsive Design.
-    These examples override the primary ('mobile first') styles.
-    Modify as content requires.
+  Utilities: Font size
+  ---
+  Font size utility classes
 */
-
-/* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {}
-
-/* Large devices (landscape tablets, desktops, 992px and up) */
-
-@media (min-width: 992px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {}
+.u-ms-1 {
+  font-size: 0.8888888889rem;
+  line-height: 1.5rem;
+}
 
 /*
-    Print styles.
+    Utilities: Widths
     ---
-    Inlined to avoid the additional HTTP request:
-    http://www.phpied.com/delay-loading-your-print-css/
+    Width utility classes
 */
+.u-flex-basis-auto {
+  flex-basis: auto;
+}
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        /* Black prints faster: http://www.sanbeiji.com/archives/953 */
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.u-1-of-2 {
+  flex-basis: 50% !important;
+}
+
+.u-2-of-2 {
+  flex-basis: 100% !important;
+}
+
+.u-1-of-3 {
+  flex-basis: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+  flex-basis: 66.6666666667% !important;
+}
+
+.u-3-of-3 {
+  flex-basis: 100% !important;
+}
+
+.u-1-of-4 {
+  flex-basis: 25% !important;
+}
+
+.u-2-of-4 {
+  flex-basis: 50% !important;
+}
+
+.u-3-of-4 {
+  flex-basis: 75% !important;
+}
+
+.u-4-of-4 {
+  flex-basis: 100% !important;
+}
+
+.u-1-of-5 {
+  flex-basis: 20% !important;
+}
+
+.u-2-of-5 {
+  flex-basis: 40% !important;
+}
+
+.u-3-of-5 {
+  flex-basis: 60% !important;
+}
+
+.u-4-of-5 {
+  flex-basis: 80% !important;
+}
+
+.u-5-of-5 {
+  flex-basis: 100% !important;
+}
+
+.u-1-of-6 {
+  flex-basis: 16.6666666667% !important;
+}
+
+.u-2-of-6 {
+  flex-basis: 33.3333333333% !important;
+}
+
+.u-3-of-6 {
+  flex-basis: 50% !important;
+}
+
+.u-4-of-6 {
+  flex-basis: 66.6666666667% !important;
+}
+
+.u-5-of-6 {
+  flex-basis: 83.3333333333% !important;
+}
+
+.u-6-of-6 {
+  flex-basis: 100% !important;
+}
+
+@media (min-width: 36.0625em) {
+  .u-1-of-2-bp1 {
+    flex-basis: 50% !important;
+  }
+  .u-2-of-2-bp1 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-3-bp1 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp1 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-3-of-3-bp1 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-4-bp1 {
+    flex-basis: 25% !important;
+  }
+  .u-2-of-4-bp1 {
+    flex-basis: 50% !important;
+  }
+  .u-3-of-4-bp1 {
+    flex-basis: 75% !important;
+  }
+  .u-4-of-4-bp1 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-5-bp1 {
+    flex-basis: 20% !important;
+  }
+  .u-2-of-5-bp1 {
+    flex-basis: 40% !important;
+  }
+  .u-3-of-5-bp1 {
+    flex-basis: 60% !important;
+  }
+  .u-4-of-5-bp1 {
+    flex-basis: 80% !important;
+  }
+  .u-5-of-5-bp1 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-6-bp1 {
+    flex-basis: 16.6666666667% !important;
+  }
+  .u-2-of-6-bp1 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-3-of-6-bp1 {
+    flex-basis: 50% !important;
+  }
+  .u-4-of-6-bp1 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-5-of-6-bp1 {
+    flex-basis: 83.3333333333% !important;
+  }
+  .u-6-of-6-bp1 {
+    flex-basis: 100% !important;
+  }
+}
+@media (min-width: 48.0625em) {
+  .u-1-of-2-bp2 {
+    flex-basis: 50% !important;
+  }
+  .u-2-of-2-bp2 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-3-bp2 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp2 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-3-of-3-bp2 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-4-bp2 {
+    flex-basis: 25% !important;
+  }
+  .u-2-of-4-bp2 {
+    flex-basis: 50% !important;
+  }
+  .u-3-of-4-bp2 {
+    flex-basis: 75% !important;
+  }
+  .u-4-of-4-bp2 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-5-bp2 {
+    flex-basis: 20% !important;
+  }
+  .u-2-of-5-bp2 {
+    flex-basis: 40% !important;
+  }
+  .u-3-of-5-bp2 {
+    flex-basis: 60% !important;
+  }
+  .u-4-of-5-bp2 {
+    flex-basis: 80% !important;
+  }
+  .u-5-of-5-bp2 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-6-bp2 {
+    flex-basis: 16.6666666667% !important;
+  }
+  .u-2-of-6-bp2 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-3-of-6-bp2 {
+    flex-basis: 50% !important;
+  }
+  .u-4-of-6-bp2 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-5-of-6-bp2 {
+    flex-basis: 83.3333333333% !important;
+  }
+  .u-6-of-6-bp2 {
+    flex-basis: 100% !important;
+  }
+}
+@media (min-width: 62.0625em) {
+  .u-1-of-2-bp3 {
+    flex-basis: 50% !important;
+  }
+  .u-2-of-2-bp3 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-3-bp3 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp3 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-3-of-3-bp3 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-4-bp3 {
+    flex-basis: 25% !important;
+  }
+  .u-2-of-4-bp3 {
+    flex-basis: 50% !important;
+  }
+  .u-3-of-4-bp3 {
+    flex-basis: 75% !important;
+  }
+  .u-4-of-4-bp3 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-5-bp3 {
+    flex-basis: 20% !important;
+  }
+  .u-2-of-5-bp3 {
+    flex-basis: 40% !important;
+  }
+  .u-3-of-5-bp3 {
+    flex-basis: 60% !important;
+  }
+  .u-4-of-5-bp3 {
+    flex-basis: 80% !important;
+  }
+  .u-5-of-5-bp3 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-6-bp3 {
+    flex-basis: 16.6666666667% !important;
+  }
+  .u-2-of-6-bp3 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-3-of-6-bp3 {
+    flex-basis: 50% !important;
+  }
+  .u-4-of-6-bp3 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-5-of-6-bp3 {
+    flex-basis: 83.3333333333% !important;
+  }
+  .u-6-of-6-bp3 {
+    flex-basis: 100% !important;
+  }
+}
+@media (min-width: 75.0625em) {
+  .u-1-of-2-bp4 {
+    flex-basis: 50% !important;
+  }
+  .u-2-of-2-bp4 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-3-bp4 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp4 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-3-of-3-bp4 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-4-bp4 {
+    flex-basis: 25% !important;
+  }
+  .u-2-of-4-bp4 {
+    flex-basis: 50% !important;
+  }
+  .u-3-of-4-bp4 {
+    flex-basis: 75% !important;
+  }
+  .u-4-of-4-bp4 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-5-bp4 {
+    flex-basis: 20% !important;
+  }
+  .u-2-of-5-bp4 {
+    flex-basis: 40% !important;
+  }
+  .u-3-of-5-bp4 {
+    flex-basis: 60% !important;
+  }
+  .u-4-of-5-bp4 {
+    flex-basis: 80% !important;
+  }
+  .u-5-of-5-bp4 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-6-bp4 {
+    flex-basis: 16.6666666667% !important;
+  }
+  .u-2-of-6-bp4 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-3-of-6-bp4 {
+    flex-basis: 50% !important;
+  }
+  .u-4-of-6-bp4 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-5-of-6-bp4 {
+    flex-basis: 83.3333333333% !important;
+  }
+  .u-6-of-6-bp4 {
+    flex-basis: 100% !important;
+  }
+}
+@media (min-width: 87.5625em) {
+  .u-1-of-2-bp5 {
+    flex-basis: 50% !important;
+  }
+  .u-2-of-2-bp5 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-3-bp5 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp5 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-3-of-3-bp5 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-4-bp5 {
+    flex-basis: 25% !important;
+  }
+  .u-2-of-4-bp5 {
+    flex-basis: 50% !important;
+  }
+  .u-3-of-4-bp5 {
+    flex-basis: 75% !important;
+  }
+  .u-4-of-4-bp5 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-5-bp5 {
+    flex-basis: 20% !important;
+  }
+  .u-2-of-5-bp5 {
+    flex-basis: 40% !important;
+  }
+  .u-3-of-5-bp5 {
+    flex-basis: 60% !important;
+  }
+  .u-4-of-5-bp5 {
+    flex-basis: 80% !important;
+  }
+  .u-5-of-5-bp5 {
+    flex-basis: 100% !important;
+  }
+  .u-1-of-6-bp5 {
+    flex-basis: 16.6666666667% !important;
+  }
+  .u-2-of-6-bp5 {
+    flex-basis: 33.3333333333% !important;
+  }
+  .u-3-of-6-bp5 {
+    flex-basis: 50% !important;
+  }
+  .u-4-of-6-bp5 {
+    flex-basis: 66.6666666667% !important;
+  }
+  .u-5-of-6-bp5 {
+    flex-basis: 83.3333333333% !important;
+  }
+  .u-6-of-6-bp5 {
+    flex-basis: 100% !important;
+  }
 }

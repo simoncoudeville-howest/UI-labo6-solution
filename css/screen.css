@@ -351,8 +351,8 @@ a:active {
 .c-author {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
-  gap: 16px;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
 }
 @media (min-width: 62.0625em) {
   .c-author {
@@ -362,8 +362,8 @@ a:active {
 }
 
 .c-author__image {
-  width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  aspect-ratio: 1/1;
   border-radius: 100%;
 }
 
@@ -377,14 +377,14 @@ a:active {
 }
 
 .c-author__name {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
 }
 
 .c-author__meta {
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  line-height: 24px;
+  font-size: 0.8888888889rem;
+  font-family: "Inter Web", Times, serif;
+  line-height: 1.5rem;
+  color: hsl(198.0786026201, 10%, 50%);
 }
 
 /*
@@ -426,6 +426,15 @@ a:active {
 /*---------------------------------------/*
  # UTILITIES
 /*---------------------------------------*/
+/*
+    Utilities: Colors
+    ---
+    Utility classes to set the color of an element
+*/
+.u-color-meta {
+  color: hsl(198.0786026201, 10%, 50%);
+}
+
 /*
     Utilities: Max widths
     ---

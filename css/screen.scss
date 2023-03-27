@@ -524,8 +524,8 @@ a:active {
 .c-author {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
-  gap: 16px;
+  margin-bottom: $space-m;
+  gap: $space-s;
 
   @include mq(bp3) {
     flex-direction: column;
@@ -534,8 +534,8 @@ a:active {
 }
 
 .c-author__image {
-  width: 56px;
-  height: 56px;
+  width: calc($baseline * 7);
+  aspect-ratio: 1/1;
   border-radius: 100%;
 }
 
@@ -549,14 +549,14 @@ a:active {
 }
 
 .c-author__name {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: $ms0;
 }
 
 .c-author__meta {
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  line-height: 24px;
+  font-size: $ms-1;
+  font-family: $font-family-secondary;
+  line-height: calc($baseline * 3);
+  color: $color-text-lighter;
 }
 
 /*
@@ -601,6 +601,16 @@ a:active {
 /*---------------------------------------/*
  # UTILITIES
 /*---------------------------------------*/
+
+/*
+    Utilities: Colors
+    ---
+    Utility classes to set the color of an element
+*/
+
+.u-color-meta {
+  color: $color-text-lighter;
+}
 
 /*
     Utilities: Max widths

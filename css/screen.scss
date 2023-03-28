@@ -217,7 +217,7 @@ img {
 
 html {
   font-size: calc($root-font-size / 16 * 100%);
-  line-height: 1.5; // 24px
+  line-height: calc(24 / $root-font-size); // 24px
   font-family: $font-family-primary; // global font-family
   color: $color-text-light; // global text color
   scroll-behavior: smooth; // smooth scrolling
